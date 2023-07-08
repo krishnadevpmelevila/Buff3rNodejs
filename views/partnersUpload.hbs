@@ -1,0 +1,101 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.3/css/foundation.min.css" integrity="sha512-2gZTJj/HcA2w4SC4HPlP8WVmWx4yMkSfuSbG9p8ceC6U7v6/qIt5z5R5B8zhc1nJv6MJf3tkYTyL1lQgxtPhoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #c0a2e9, #6C63FF);
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    h4 {
+      color: white;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    
+    label {
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      display: block;
+    }
+    
+    input[type="file"],
+    input[type="url"],
+    input[type="text"] {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #33327D;
+      border: none;
+      border-radius: 3px;
+      padding: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    
+    input[type="file"]:hover,
+    input[type="text"]:hover,
+    input[type="url"]:hover,
+    input[type="file"]:focus,
+    input[type="url"]:focus,
+    input[type="text"]:focus {
+      background-color: rgba(255, 255, 255, 1);
+    }
+    
+    ul.clearing-thumbs {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #FFA801;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #FFC107;
+    }
+
+    .form-group {
+      margin-bottom: 40px;
+    }
+
+    .form-wrapper {
+      background-color: rgb(147, 179, 250);
+      padding: 40px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="form-wrapper">
+    <h4>Main Gallery</h4>
+    <form method="POST" enctype="multipart/form-data" action="/partnersUpload" >
+      <div class="form-group">
+        <label>Event Image</label>
+        <input type="file"  id="event-image" name="event-image" multiple/>
+      </div>
+
+
+      <button class="btn" id="upload">Upload</button>
+      <a href="/" class="btn" style="text-decoration: none; font-size: small;">Back</a>
+    </form>
+  </div>
+  </body>
